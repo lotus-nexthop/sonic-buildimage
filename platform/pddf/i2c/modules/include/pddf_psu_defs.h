@@ -95,6 +95,8 @@ typedef struct PSU_DATA
 {
     int idx;    // psu index
     int num_psu_fans;
+    int num_psu_thermals;
+    u32 psu_temp_high_thresh_bitmap;
     PSU_SYSFS_DATA psu_attr;
     int len;             // no of valid attributes for this psu client
     PSU_SYSFS_DATA psu_attrs[MAX_PSU_ATTRS]; 
