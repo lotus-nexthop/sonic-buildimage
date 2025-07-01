@@ -1824,6 +1824,9 @@ class PddfParse():
         if attr['device_type'] == 'TEMP_SENSOR':
             return self.temp_sensor_parse(dev, ops)
 
+        if attr['device_type'] == 'ASIC_TEMP_SENSOR':
+            return self.asic_temp_sensor_parse(dev, ops)
+
         if attr['device_type'] in ['SFP', 'SFP+', 'SFP28', 'QSFP', 'QSFP+', 'QSFP28', 'QSFP-DD', 'OSFP']:
             return self.optic_parse(dev, ops)
 
